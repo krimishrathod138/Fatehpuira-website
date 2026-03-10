@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Fatehpuria</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Google Fonts: Assistant -->
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        body { font-family: 'Assistant', sans-serif; }
+        .shape-blob {
+            background: rgba(18, 18, 18, 0.03);
+            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+            position: absolute;
+            z-index: -1;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="bg-white text-[#121212]">
+
+    <!-- Announcement Bar -->
+    <div class="bg-[#121212] text-white text-center py-2 text-xs uppercase tracking-[.2em] font-light">
+        Free Shipping on all orders above ₹2000!
+    </div>
+
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white border-b border-[rgba(18,18,18,0.08)]">
+        <div class="container mx-auto px-4 lg:px-12 py-5 flex items-center justify-between">
+            <button class="lg:hidden text-2xl" id="menu-btn" aria-label="Open Menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <a href="index.html" class="flex items-center">
+                <img src="logo.png" alt="Fatehpuria" class="h-8 md:h-10 w-auto object-contain">
+            </a>
+            <nav class="hidden lg:flex space-x-10 text-[13px] font-normal uppercase tracking-[.1em]">
+                <a href="index.html" class="hover:underline underline-offset-[6px] decoration-[1.5px]">Home</a>
+                <a href="about.html" class="hover:underline underline-offset-[6px] decoration-[1.5px]">About Us</a>
+                <a href="partners.html" class="hover:underline underline-offset-[6px] decoration-[1.5px]">Partner Brands</a>
+                <a href="warehouse.html" class="hover:underline underline-offset-[6px] decoration-[1.5px]">Warehouse</a>
+                <a href="contact.html" class="underline underline-offset-[6px] decoration-[1.5px]">Contact</a>
+            </nav>
+            <div class="flex items-center space-x-8 text-xl">
+                <a href="#" class="hover:scale-110 transition-transform"><i class="fa-solid fa-magnifying-glass text-lg"></i></a>
+                <a href="login.html" class="hidden sm:block hover:scale-110 transition-transform"><i class="fa-regular fa-user text-lg"></i></a>
+                <a href="cart.html" class="hover:scale-110 transition-transform relative">
+                    <i class="fa-solid fa-cart-shopping text-lg"></i>
+                    <span class="absolute -top-2.5 -right-2.5 bg-[#121212] text-white text-[9px] font-bold rounded-full w-4 h-4 flex items-center justify-center">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Contact Hero -->
+        <section class="relative py-24 bg-gray-50 overflow-hidden">
+            <div class="shape-blob w-[400px] h-[400px] -top-20 -right-20 animate-float opacity-50"></div>
+            <div class="container mx-auto px-4 lg:px-12 text-center relative z-10">
+                <p class="text-xs uppercase tracking-[.3em] text-gray-500 mb-4" data-aos="fade-up">Get in Touch</p>
+                <h1 class="text-4xl md:text-6xl font-light uppercase tracking-[.1em] mb-8 leading-tight" data-aos="fade-up" data-aos-delay="100">Let's Build India's <br>Supply Chain Together</h1>
+                <div class="w-16 h-0.5 bg-[#121212] mx-auto mb-10" data-aos="fade-up" data-aos-delay="200"></div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="container mx-auto px-4 lg:px-12 py-24">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-20">
+                <!-- Contact Form -->
+                <div data-aos="fade-right">
+                    <h2 class="text-2xl font-light uppercase tracking-widest mb-10">Inquiry Form</h2>
+                    <form class="space-y-8">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <div>
+                                <label for="first-name" class="text-[10px] uppercase tracking-[.2em] text-gray-400 mb-2 block">First Name</label>
+                                <input id="first-name" type="text" placeholder="John" class="w-full border-b border-gray-200 py-2 focus:outline-none focus:border-[#121212] transition font-light text-sm">
+                            </div>
+                            <div>
+                                <label for="last-name" class="text-[10px] uppercase tracking-[.2em] text-gray-400 mb-2 block">Last Name</label>
+                                <input id="last-name" type="text" placeholder="Doe" class="w-full border-b border-gray-200 py-2 focus:outline-none focus:border-[#121212] transition font-light text-sm">
+                            </div>
+                        </div>
+                        <div>
+                            <label for="email" class="text-[10px] uppercase tracking-[.2em] text-gray-400 mb-2 block">Business Email</label>
+                            <input id="email" type="email" placeholder="john@company.com" class="w-full border-b border-gray-200 py-2 focus:outline-none focus:border-[#121212] transition font-light text-sm">
+                        </div>
+                        <div>
+                            <label for="subject" class="text-[10px] uppercase tracking-[.2em] text-gray-400 mb-2 block">Subject</label>
+                            <select id="subject" class="w-full border-b border-gray-200 py-2 focus:outline-none focus:border-[#121212] transition font-light text-sm bg-transparent">
+                                <option>Brand Partnership</option>
+                                <option>Retailer Inquiry</option>
+                                <option>Logistics Query</option>
+                                <option>Career Opportunity</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="message" class="text-[10px] uppercase tracking-[.2em] text-gray-400 mb-2 block">Your Message</label>
+                            <textarea id="message" rows="4" placeholder="Describe your inquiry..." class="w-full border-b border-gray-200 py-2 focus:outline-none focus:border-[#121212] transition font-light text-sm"></textarea>
+                        </div>
+                        <button type="submit" class="bg-[#121212] text-white px-12 py-4 uppercase text-[10px] tracking-[.3em] font-medium hover:bg-gray-800 transition shadow-lg">Send Message</button>
+                    </form>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="space-y-16" data-aos="fade-left">
+                    <div>
+                        <h2 class="text-[10px] font-bold uppercase tracking-[.3em] text-gray-400 mb-6">Our Headquarters</h2>
+                        <div class="flex items-start space-x-6">
+                            <div class="w-12 h-12 bg-gray-50 flex items-center justify-center rounded-full text-[#121212] flex-shrink-0">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <p class="text-[15px] text-gray-600 leading-relaxed tracking-wide font-light">
+                                    Fatehpuria Hygiene Private Limited,<br>
+                                    Level 4, Business Hub,<br>
+                                    Industrial Area, Phase II,<br>
+                                    Mumbai, India - 400001
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h2 class="text-[10px] font-bold uppercase tracking-[.3em] text-gray-400 mb-6">Direct Channels</h2>
+                        <div class="space-y-6">
+                            <div class="flex items-center space-x-6">
+                                <div class="w-12 h-12 bg-gray-50 flex items-center justify-center rounded-full text-[#121212] flex-shrink-0">
+                                    <i class="fa-solid fa-phone"></i>
+                                </div>
+                                <p class="text-[15px] text-gray-600 font-light">+91 22 9876 5432</p>
+                            </div>
+                            <div class="flex items-center space-x-6">
+                                <div class="w-12 h-12 bg-gray-50 flex items-center justify-center rounded-full text-[#121212] flex-shrink-0">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </div>
+                                <p class="text-[15px] text-gray-600 font-light">partnerships@fhpl.com</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h2 class="text-[10px] font-bold uppercase tracking-[.3em] text-gray-400 mb-6">Socials</h2>
+                        <div class="flex space-x-4">
+                            <a href="#" class="w-12 h-12 border border-gray-100 flex items-center justify-center rounded-full hover:bg-[#121212] hover:text-white transition duration-500"><i class="fa-brands fa-linkedin-in"></i></a>
+                            <a href="#" class="w-12 h-12 border border-gray-100 flex items-center justify-center rounded-full hover:bg-[#121212] hover:text-white transition duration-500"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#" class="w-12 h-12 border border-gray-100 flex items-center justify-center rounded-full hover:bg-[#121212] hover:text-white transition duration-500"><i class="fa-brands fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Google Map Placeholder -->
+        <section class="h-[400px] w-full bg-gray-100 grayscale hover:grayscale-0 transition duration-700" data-aos="fade-up">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.8123456789!2d72.877426!3d19.076090!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDA0JzMzLjkiTiA3MsKwNTInMzguNyJF!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin" 
+                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white pt-20 pb-10 border-t border-[rgba(18,18,18,0.05)]">
+        <div class="container mx-auto px-4 lg:px-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16">
+            <div class="space-y-6">
+                <h4 class="text-[13px] font-semibold uppercase tracking-[.2em] mb-8">Fatehpuria Hygiene (FHPL)</h4>
+                <p class="text-[13px] text-gray-600 leading-relaxed tracking-wide">
+                    Technology-backed fulfiIment, priority service levels, and a partner-first approach built over five decades of supply-chain excellence.
+                </p>
+                <div class="flex space-x-6 text-xl text-[#121212]">
+                    <a href="#" class="hover:opacity-70 transition"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#" class="hover:opacity-70 transition"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="hover:opacity-70 transition"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+            </div>
+            <div>
+                <h4 class="text-[13px] font-semibold uppercase tracking-[.2em] mb-8">Company</h4>
+                <ul class="text-[13px] text-gray-600 space-y-4 tracking-wide">
+                    <li><a href="about.html" class="hover:underline underline-offset-4">About Us</a></li>
+                    <li><a href="partners.html" class="hover:underline underline-offset-4">Partner Brands</a></li>
+                    <li><a href="warehouse.html" class="hover:underline underline-offset-4">Warehouse</a></li>
+                    <li><a href="careers.html" class="hover:underline underline-offset-4">Careers</a></li>
+                    <li><a href="contact.html" class="hover:underline underline-offset-4">Contact Us</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-[13px] font-semibold uppercase tracking-[.2em] mb-8">Get In Touch</h4>
+                <ul class="text-[13px] text-gray-600 space-y-4 tracking-wide">
+                    <li class="flex items-start space-x-3">
+                        <i class="fa-solid fa-location-dot mt-1"></i>
+                        <span>Fatehpuria Hygiene Private Limited,<br>Registered Office Address,<br>India</span>
+                    </li>
+                    <li class="flex items-center space-x-3">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>+91 98765 43210</span>
+                    </li>
+                    <li class="flex items-center space-x-3">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>info@fhpl.com</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="space-y-6">
+                <h4 class="text-[13px] font-semibold uppercase tracking-[.2em] mb-8">Business Partner?</h4>
+                <p class="text-[13px] text-gray-600 tracking-wide">Join our network of leading FMCG and Hygiene brands.</p>
+                <a href="contact.html" class="inline-block border border-[#121212] text-[#121212] px-8 py-2.5 uppercase text-[10px] tracking-[.2em] font-medium hover:bg-[#121212] hover:text-white transition duration-500">
+                    Partner With Us
+                </a>
+            </div>
+        </div>
+        <div class="container mx-auto px-4 lg:px-12 mt-24 pt-8 border-t border-[rgba(18,18,18,0.08)] flex flex-col md:flex-row justify-between items-center text-[11px] text-gray-500 uppercase tracking-[.15em]">
+            <p>&copy; 2026, Fatehpuria Hygiene Private Limited. All Rights Reserved.</p>
+            <div class="mt-4 md:mt-0 flex space-x-4">
+                <p>Distributing Excellence Since 1961</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu Drawer (Hidden by default) -->
+    <div id="mobile-menu" class="fixed inset-0 bg-black bg-opacity-50 z-[60] hidden transition-opacity duration-300">
+        <div class="bg-white w-4/5 h-full p-8 space-y-8 transform -translate-x-full transition-transform duration-300">
+            <div class="flex justify-between items-center">
+                <span class="text-xl font-bold uppercase">Menu</span>
+                <button id="close-menu" aria-label="Close Menu"><i class="fa-solid fa-xmark text-2xl"></i></button>
+            </div>
+            <nav class="flex flex-col space-y-6 text-sm uppercase tracking-widest">
+                <a href="index.html" class="border-b border-gray-100 pb-2">Home</a>
+                <a href="about.html" class="border-b border-gray-100 pb-2">About Us</a>
+                <a href="partners.html" class="border-b border-gray-100 pb-2">Partner Brands</a>
+                <a href="warehouse.html" class="border-b border-gray-100 pb-2">Warehouse</a>
+                <a href="contact.html" class="border-b border-gray-100 pb-2">Contact</a>
+            </nav>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+

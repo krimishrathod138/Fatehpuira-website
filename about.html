@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Fatehpuria</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Google Fonts: Assistant -->
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        body { font-family: 'Assistant', sans-serif; }
+        .shape-blob {
+            background: rgba(18, 18, 18, 0.03);
+            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+            position: absolute;
+            z-index: -1;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+        .slideshow-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+        .slideshow-img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            background-color: #fff;
+            opacity: 0;
+            animation: crossFade 12s infinite;
+        }
+        .slideshow-img:nth-child(1) { animation-delay: 0s; }
+        .slideshow-img:nth-child(2) { animation-delay: 4s; }
+        .slideshow-img:nth-child(3) { animation-delay: 8s; }
+
+        @keyframes crossFade {
+            0% { opacity: 0; }
+            8% { opacity: 1; }
+            33% { opacity: 1; }
+            41% { opacity: 0; }
+            100% { opacity: 0; }
+        }
+
+        .location-card {
+            transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+            position: relative;
+        }
+    </style>
+</head>
+<body class="bg-white text-[#121212]">
+
+    <!-- Announcement Bar -->
+    <div class="bg-[#121212] text-white text-center py-2 text-xs uppercase tracking-[.2em] font-light">
+        Free Shipping on all orders above ₹2000!
+    </div>
+
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white border-b border-[rgba(18,18,18,0.08)]">
+        <div class="container mx-auto px-4 lg:px-12 py-5 flex items-center justify-between">
+            <button class="lg:hidden text-2xl" id="menu-btn" aria-label="Open Menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <a href="index.html" class="flex items-center">
+                <img src="logo.png" alt="Fatehpuria" class="h-8 md:h-10 w-auto object-contain">
+            </a>
+            <nav class="hidden lg:flex space-x-10 text-[13px] font-normal uppercase tracking-[.1em]">
+                <a href="index.html" class="hover:underline underline-offset-[6px] decoration-[1.5px]">Home</a>
+                <a href="about.html" class="underline underline-offset-[6px] decoration-[1.5px]">About Us</a>
+                <a href="partners.html" class="hover:underline underline-offset-[6px] decoration-[1.5px]">Partner Brands</a>
+                <a href="warehouse.html" class="hover:underline underline-offset-[6px] decoration-[1.5px]">Warehouse</a>
+                <a href="contact.html" class="hover:underline underline-offset-[6px] decoration-[1.5px]">Contact</a>
+            </nav>
+            <div class="flex items-center space-x-8 text-xl">
+                <a href="#" class="hover:scale-110 transition-transform"><i class="fa-solid fa-magnifying-glass text-lg"></i></a>
+                <a href="login.html" class="hidden sm:block hover:scale-110 transition-transform"><i class="fa-regular fa-user text-lg"></i></a>
+                <a href="cart.html" class="hover:scale-110 transition-transform relative">
+                    <i class="fa-solid fa-cart-shopping text-lg"></i>
+                    <span class="absolute -top-2.5 -right-2.5 bg-[#121212] text-white text-[9px] font-bold rounded-full w-4 h-4 flex items-center justify-center">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- About Hero -->
+        <section class="relative py-24 bg-gray-50 overflow-hidden">
+            <div class="shape-blob w-[400px] h-[400px] -top-20 -left-20 animate-float opacity-50"></div>
+            <div class="container mx-auto px-4 lg:px-12 text-center relative z-10">
+                <p class="text-xs uppercase tracking-[.3em] text-gray-500 mb-4" data-aos="fade-up">Our Story</p>
+                <h1 class="text-4xl md:text-6xl font-light uppercase tracking-[.1em] mb-8 leading-tight" data-aos="fade-up" data-aos-delay="100">Distributing Excellence <br>Since 1961</h1>
+                <div class="w-16 h-0.5 bg-[#121212] mx-auto mb-10" data-aos="fade-up" data-aos-delay="200"></div>
+            </div>
+        </section>
+
+        <!-- Our Legacy Section -->
+        <section class="container mx-auto px-4 lg:px-12 py-24 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+            <div class="relative" data-aos="fade-right">
+                <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?q=80&w=2074&auto=format&fit=crop" alt="Legacy" class="w-full h-auto shadow-2xl">
+                <div class="absolute -bottom-8 -right-8 bg-[#121212] text-white p-10 hidden md:block" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="text-3xl font-light mb-1">50+</div>
+                    <div class="text-[10px] uppercase tracking-widest opacity-70">Years of Expertise</div>
+                </div>
+            </div>
+            <div class="space-y-8" data-aos="fade-left">
+                <h2 class="text-3xl font-light uppercase tracking-[.1em]">The FHPL Journey</h2>
+                <p class="text-[15px] text-gray-600 leading-relaxed tracking-wide font-light">
+                    While Fatehpuria Hygiene Private Limited (FHPL) was established in 1976 to focus on modern hygiene and e-commerce distribution, we inherit a strong trading and supply chain expertise built over five decades by our parent group.
+                </p>
+                <p class="text-[15px] text-gray-600 leading-relaxed tracking-wide font-light">
+                    Today, we are a leading name in the FMCG sector, bridging the gap between world-class brands and the Indian consumer. Our technology-backed fulfillment and priority service levels are built on a partner-first approach.
+                </p>
+                <div class="grid grid-cols-2 gap-8 pt-6">
+                    <div>
+                        <div class="text-2xl font-light text-[#121212] mb-1">99.5%</div>
+                        <div class="text-[10px] uppercase tracking-[.2em] text-gray-500">Fulfilment Rate</div>
+                    </div>
+                    <div>
+                        <div class="text-2xl font-light text-[#121212] mb-1">500+</div>
+                        <div class="text-[10px] uppercase tracking-[.2em] text-gray-500">Retail Partners</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Core Values -->
+        <section class="bg-[#f9f9f9] py-24 relative overflow-hidden">
+            <div class="shape-blob w-[300px] h-[300px] bottom-0 -right-10 animate-float opacity-30"></div>
+            <div class="container mx-auto px-4 lg:px-12">
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <h2 class="text-3xl font-light uppercase tracking-[.1em]">Our Core Values</h2>
+                    <div class="w-12 h-0.5 bg-[#121212] mx-auto mt-4"></div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                    <div class="bg-white p-12 text-center shadow-sm hover:shadow-xl transition duration-500" data-aos="fade-up">
+                        <i class="fa-solid fa-handshake text-3xl mb-6 opacity-30"></i>
+                        <h3 class="text-xl uppercase tracking-widest mb-4">Integrity</h3>
+                        <p class="text-sm text-gray-500 leading-relaxed">Built on 50 years of trust, we maintain transparency in every transaction and partnership.</p>
+                    </div>
+                    <div class="bg-white p-12 text-center shadow-sm hover:shadow-xl transition duration-500" data-aos="fade-up" data-aos-delay="100">
+                        <i class="fa-solid fa-microchip text-3xl mb-6 opacity-30"></i>
+                        <h3 class="text-xl uppercase tracking-widest mb-4">Innovation</h3>
+                        <p class="text-sm text-gray-500 leading-relaxed">Leveraging modern tech to optimize supply chains and provide real-time fulfillment data.</p>
+                    </div>
+                    <div class="bg-white p-12 text-center shadow-sm hover:shadow-xl transition duration-500" data-aos="fade-up" data-aos-delay="200">
+                        <i class="fa-solid fa-shield-heart text-3xl mb-6 opacity-30"></i>
+                        <h3 class="text-xl uppercase tracking-widest mb-4">Excellence</h3>
+                        <p class="text-sm text-gray-500 leading-relaxed">Committed to maintaining the highest standards in hygiene distribution and service.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Categories Section -->
+        <section class="container mx-auto px-4 lg:px-12 py-24">
+            <div class="text-center mb-12" data-aos="fade-up">
+                <h2 class="text-3xl font-light uppercase tracking-[.1em]">Our Categories</h2>
+                <div class="w-12 h-0.5 bg-[#121212] mx-auto mt-4"></div>
+            </div>
+            <hr class="border-gray-100 mb-16">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+                <!-- Category 1 -->
+                <div class="group location-card cursor-pointer" data-aos="fade-up">
+                    <div class="relative overflow-hidden aspect-square mb-6 bg-gray-100">
+                        <div class="slideshow-container transition-all duration-700 group-hover:scale-110">
+                            <img src="gromming1.jpeg" alt="Personal Care 1" class="slideshow-img">
+                            <img src="gromming2.jpeg" alt="Personal Care 2" class="slideshow-img">
+                            <img src="gromming3.jpeg" alt="Personal Care 3" class="slideshow-img">
+                        </div>
+                        <div class="absolute top-4 right-4 bg-white/90 px-3 py-1 text-[9px] font-bold tracking-widest uppercase z-10">Essential</div>
+                    </div>
+                    <h3 class="text-xl font-light uppercase tracking-[.2em] mb-2 group-hover:text-blue-600 transition-colors">Personal Care</h3>
+                    <div class="w-8 h-0.5 bg-gray-200 group-hover:w-full group-hover:bg-blue-600 transition-all duration-500 mb-4"></div>
+                    <p class="text-[11px] text-gray-500 uppercase tracking-widest leading-relaxed">Comprehensive range of premium hygiene and personal grooming solutions.</p>
+                </div>
+
+                <!-- Category 2 -->
+                <div class="group location-card cursor-pointer" data-aos="fade-up" data-aos-delay="100">
+                    <div class="relative overflow-hidden aspect-square mb-6 bg-gray-100">
+                        <div class="slideshow-container transition-all duration-700 group-hover:scale-110">
+                            <img src="babycare1.jpeg" alt="Home Hygiene 1" class="slideshow-img">
+                            <img src="babycare2.jpeg" alt="Home Hygiene 2" class="slideshow-img">
+                            <img src="babycare3.jpeg" alt="Home Hygiene 3" class="slideshow-img">
+                        </div>
+                        <div class="absolute top-4 right-4 bg-white/90 px-3 py-1 text-[9px] font-bold tracking-widest uppercase z-10">Care</div>
+                    </div>
+                    <h3 class="text-xl font-light uppercase tracking-[.2em] mb-2 group-hover:text-blue-600 transition-colors">Baby Care</h3>
+                    <div class="w-8 h-0.5 bg-gray-200 group-hover:w-full group-hover:bg-blue-600 transition-all duration-500 mb-4"></div>
+                    <p class="text-[11px] text-gray-500 uppercase tracking-widest leading-relaxed">Advanced cleaning and disinfection products for a safer living environment.</p>
+                </div>
+
+                <!-- Category 3 -->
+                <div class="group location-card cursor-pointer" data-aos="fade-up" data-aos-delay="200">
+                    <div class="relative overflow-hidden aspect-square mb-6 bg-gray-100">
+                        <div class="slideshow-container transition-all duration-700 group-hover:scale-110">
+                            <img src="giftpack1.jpeg" alt="FMCG 1" class="slideshow-img">
+                            <img src="giftpack2.jpeg" alt="FMCG 2" class="slideshow-img">
+                            <img src="giftpack3.jpeg" alt="FMCG 3" class="slideshow-img">
+                        </div>
+                        <div class="absolute top-4 right-4 bg-white/90 px-3 py-1 text-[9px] font-bold tracking-widest uppercase z-10">Premium</div>
+                    </div>
+                    <h3 class="text-xl font-light uppercase tracking-[.2em] mb-2 group-hover:text-blue-600 transition-colors">Gift Packs</h3>
+                    <div class="w-8 h-0.5 bg-gray-200 group-hover:w-full group-hover:bg-blue-600 transition-all duration-500 mb-4"></div>
+                    <p class="text-[11px] text-gray-500 uppercase tracking-widest leading-relaxed">Fast-moving consumer goods that bridge the gap between quality and value.</p>
+                </div>
+
+                <!-- Category 4 -->
+                <div class="group location-card cursor-pointer" data-aos="fade-up" data-aos-delay="300">
+                    <div class="relative overflow-hidden aspect-square mb-6 bg-gray-100">
+                        <div class="slideshow-container transition-all duration-700 group-hover:scale-110">
+                            <img src="Diapers1.jpeg" alt="Wellness 1" class="slideshow-img">
+                            <img src="Diapers2.jpeg" alt="Wellness 2" class="slideshow-img">
+                            <img src="Diapers3.jpeg" alt="Wellness 3" class="slideshow-img">
+                        </div>
+                        <div class="absolute top-4 right-4 bg-white/90 px-3 py-1 text-[9px] font-bold tracking-widest uppercase z-10">Care</div>
+                    </div>
+                    <h3 class="text-xl font-light uppercase tracking-[.2em] mb-2 group-hover:text-blue-600 transition-colors">Diapers</h3>
+                    <div class="w-8 h-0.5 bg-gray-200 group-hover:w-full group-hover:bg-blue-600 transition-all duration-500 mb-4"></div>
+                    <p class="text-[11px] text-gray-500 uppercase tracking-widest leading-relaxed">Curated selection of wellness products promoting a healthier lifestyle.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Channels Section -->
+        <section class="container mx-auto px-4 lg:px-12 py-24 bg-[#fcfcfc]">
+            <div class="text-center mb-12" data-aos="fade-up">
+                <h2 class="text-3xl font-light uppercase tracking-[.1em]">Our Channels</h2>
+                <div class="w-12 h-0.5 bg-[#121212] mx-auto mt-4"></div>
+            </div>
+            <hr class="border-gray-200 mb-16">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+                <!-- Channel 2 -->
+                <div class="group location-card cursor-pointer" data-aos="fade-up" data-aos-delay="100">
+                    <div class="relative overflow-hidden aspect-square mb-6 bg-gray-100">
+                        <div class="slideshow-container transition-all duration-700 group-hover:scale-110">
+                            <img src="ecommerece1.png" alt="E-Commerce 1" class="slideshow-img">
+                            <img src="ecommerece2.png" alt="E-Commerce 2" class="slideshow-img">
+                            <img src="ecommerece3.png" alt="E-Commerce 3" class="slideshow-img">
+                        </div>
+                        <div class="absolute top-4 right-4 bg-white/90 px-3 py-1 text-[9px] font-bold tracking-widest uppercase z-10">D2C</div>
+                    </div>
+                    <h3 class="text-xl font-light uppercase tracking-[.2em] mb-2 group-hover:text-blue-600 transition-colors">E-Commerce</h3>
+                    <div class="w-8 h-0.5 bg-gray-200 group-hover:w-full group-hover:bg-blue-600 transition-all duration-500 mb-4"></div>
+                    <p class="text-[11px] text-gray-500 uppercase tracking-widest leading-relaxed">Robust online presence delivering products directly to consumers' doorsteps.</p>
+                </div>
+
+                <!-- Channel 3 -->
+                <div class="group location-card cursor-pointer" data-aos="fade-up" data-aos-delay="200">
+                    <div class="relative overflow-hidden aspect-square mb-6 bg-gray-100">
+                        <div class="slideshow-container transition-all duration-700 group-hover:scale-110">
+                            <img src="quickcommerce1.png" alt="Modern Trade 1" class="slideshow-img">
+                            <img src="quickcommerce2.png" alt="Modern Trade 2" class="slideshow-img">
+                            <img src="quickcommerce3.png" alt="Modern Trade 3" class="slideshow-img">
+                        </div>
+                        <div class="absolute top-4 right-4 bg-white/90 px-3 py-1 text-[9px] font-bold tracking-widest uppercase z-10">B2C</div>
+                    </div>
+                    <h3 class="text-xl font-light uppercase tracking-[.2em] mb-2 group-hover:text-blue-600 transition-colors">Quick Commerce</h3>
+                    <div class="w-8 h-0.5 bg-gray-200 group-hover:w-full group-hover:bg-blue-600 transition-all duration-500 mb-4"></div>
+                    <p class="text-[11px] text-gray-500 uppercase tracking-widest leading-relaxed">Strategic partnerships with large-scale hypermarkets and retail chains.</p>
+                </div>
+
+
+
+                  <!-- Channel 1 -->
+                <div class="group location-card cursor-pointer" data-aos="fade-up">
+                    <div class="relative overflow-hidden aspect-square mb-6 bg-gray-100">
+                        <div class="slideshow-container transition-all duration-700 group-hover:scale-110">
+                            <img src="retail1.png" alt="Retail 1" class="slideshow-img">
+                            <img src="retail2.png" alt="Retail 2" class="slideshow-img">
+                            <img src="reatil3.jpeg" alt="Retail 3" class="slideshow-img">
+                        </div>
+                        <div class="absolute top-4 right-4 bg-white/90 px-3 py-1 text-[9px] font-bold tracking-widest uppercase z-10">B2C</div>
+                    </div>
+                    <h3 class="text-xl font-light uppercase tracking-[.2em] mb-2 group-hover:text-blue-600 transition-colors">Retail Outlets</h3>
+                    <div class="w-8 h-0.5 bg-gray-200 group-hover:w-full group-hover:bg-blue-600 transition-all duration-500 mb-4"></div>
+                    <p class="text-[11px] text-gray-500 uppercase tracking-widest leading-relaxed">Extensive network of brick-and-mortar stores across major metropolitan hubs.</p>
+                </div>
+
+
+            </div>
+        </section>
+
+        <!-- Timeline Section Placeholder -->
+        <section class="container mx-auto px-4 lg:px-12 py-24">
+            <div class="text-center mb-20" data-aos="fade-up">
+                <h2 class="text-3xl font-light uppercase tracking-[.1em]">Timeline of Success</h2>
+                <div class="w-12 h-0.5 bg-[#121212] mx-auto mt-4"></div>
+            </div>
+            <div class="max-w-4xl mx-auto space-y-12">
+                <div class="flex items-center space-x-8" data-aos="fade-right">
+                    <div class="text-2xl font-light text-[#121212] w-24">1961</div>
+                    <div class="flex-1 border-l border-gray-200 pl-8 py-4">
+                        <h4 class="uppercase tracking-widest text-sm font-semibold mb-2">Foundation</h4>
+                        <p class="text-sm text-gray-500">The journey began with the establishment of our parent group's trading business.</p>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-8" data-aos="fade-left">
+                    <div class="text-2xl font-light text-[#121212] w-24">1976</div>
+                    <div class="flex-1 border-l border-gray-200 pl-8 py-4">
+                        <h4 class="uppercase tracking-widest text-sm font-semibold mb-2">FHPL Born</h4>
+                        <p class="text-sm text-gray-500">Fatehpuria Hygiene was established to focus specifically on the hygiene and FMCG sector.</p>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-8" data-aos="fade-right">
+                    <div class="text-2xl font-light text-[#121212] w-24">2010</div>
+                    <div class="flex-1 border-l border-gray-200 pl-8 py-4">
+                        <h4 class="uppercase tracking-widest text-sm font-semibold mb-2">Tech Expansion</h4>
+                        <p class="text-sm text-gray-500">Implemented advanced ERP and warehouse management systems for digital transformation.</p>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-8" data-aos="fade-left">
+                    <div class="text-2xl font-light text-[#121212] w-24">2024</div>
+                    <div class="flex-1 border-l border-gray-200 pl-8 py-4">
+                        <h4 class="uppercase tracking-widest text-sm font-semibold mb-2">Modern Hubs</h4>
+                        <p class="text-sm text-gray-500">Opening new automated distribution centers across Tier-1 cities in India.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white pt-20 pb-10 border-t border-[rgba(18,18,18,0.05)]">
+        <div class="container mx-auto px-4 lg:px-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16">
+            <div class="space-y-6">
+                <h4 class="text-[13px] font-semibold uppercase tracking-[.2em] mb-8">Fatehpuria Hygiene (FHPL)</h4>
+                <p class="text-[13px] text-gray-600 leading-relaxed tracking-wide">
+                    Technology-backed fulfiIment, priority service levels, and a partner-first approach built over five decades of supply-chain excellence.
+                </p>
+                <div class="flex space-x-6 text-xl text-[#121212]">
+                    <a href="#" class="hover:opacity-70 transition"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#" class="hover:opacity-70 transition"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="hover:opacity-70 transition"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+            </div>
+            <div>
+                <h4 class="text-[13px] font-semibold uppercase tracking-[.2em] mb-8">Company</h4>
+                <ul class="text-[13px] text-gray-600 space-y-4 tracking-wide">
+                    <li><a href="about.html" class="hover:underline underline-offset-4">About Us</a></li>
+                    <li><a href="partners.html" class="hover:underline underline-offset-4">Partner Brands</a></li>
+                    <li><a href="warehouse.html" class="hover:underline underline-offset-4">Warehouse</a></li>
+                    <li><a href="careers.html" class="hover:underline underline-offset-4">Careers</a></li>
+                    <li><a href="contact.html" class="hover:underline underline-offset-4">Contact Us</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-[13px] font-semibold uppercase tracking-[.2em] mb-8">Get In Touch</h4>
+                <ul class="text-[13px] text-gray-600 space-y-4 tracking-wide">
+                    <li class="flex items-start space-x-3">
+                        <i class="fa-solid fa-location-dot mt-1"></i>
+                        <span>Fatehpuria Hygiene Private Limited,<br>Registered Office Address,<br>India</span>
+                    </li>
+                    <li class="flex items-center space-x-3">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>+91 98765 43210</span>
+                    </li>
+                    <li class="flex items-center space-x-3">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>info@fhpl.com</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="space-y-6">
+                <h4 class="text-[13px] font-semibold uppercase tracking-[.2em] mb-8">Business Partner?</h4>
+                <p class="text-[13px] text-gray-600 tracking-wide">Join our network of leading FMCG and Hygiene brands.</p>
+                <a href="contact.html" class="inline-block border border-[#121212] text-[#121212] px-8 py-2.5 uppercase text-[10px] tracking-[.2em] font-medium hover:bg-[#121212] hover:text-white transition duration-500">
+                    Partner With Us
+                </a>
+            </div>
+        </div>
+        <div class="container mx-auto px-4 lg:px-12 mt-24 pt-8 border-t border-[rgba(18,18,18,0.08)] flex flex-col md:flex-row justify-between items-center text-[11px] text-gray-500 uppercase tracking-[.15em]">
+            <p>&copy; 2026, Fatehpuria Hygiene Private Limited. All Rights Reserved.</p>
+            <div class="mt-4 md:mt-0 flex space-x-4">
+                <p>Distributing Excellence Since 1961</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu Drawer (Hidden by default) -->
+    <div id="mobile-menu" class="fixed inset-0 bg-black bg-opacity-50 z-[60] hidden transition-opacity duration-300">
+        <div class="bg-white w-4/5 h-full p-8 space-y-8 transform -translate-x-full transition-transform duration-300">
+            <div class="flex justify-between items-center">
+                <span class="text-xl font-bold uppercase">Menu</span>
+                <button id="close-menu" aria-label="Close Menu"><i class="fa-solid fa-xmark text-2xl"></i></button>
+            </div>
+            <nav class="flex flex-col space-y-6 text-sm uppercase tracking-widest">
+                <a href="index.html" class="border-b border-gray-100 pb-2">Home</a>
+                <a href="about.html" class="border-b border-gray-100 pb-2">About Us</a>
+                <a href="partners.html" class="border-b border-gray-100 pb-2">Partner Brands</a>
+                <a href="warehouse.html" class="border-b border-gray-100 pb-2">Warehouse</a>
+                <a href="contact.html" class="border-b border-gray-100 pb-2">Contact</a>
+            </nav>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+

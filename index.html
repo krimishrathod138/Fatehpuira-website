@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fatehpuria - Reliable FMCG & Hygiene Distribution</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Google Fonts: Assistant -->
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Assistant', sans-serif;
+        }
+        .header-transparent {
+            background: transparent;
+            transition: background 0.3s ease;
+        }
+        .header-sticky {
+            background: #ffffff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .hero-section {
+            height: 80vh;
+            background-size: cover;
+            background-position: center;
+        }
+        /* Custom Animations */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+        .animate-float-delayed {
+            animation: float 8s ease-in-out infinite;
+            animation-delay: 2s;
+        }
+        .shape-blob {
+            background: rgba(18, 18, 18, 0.03);
+            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+            position: absolute;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body class="bg-white text-[#121212]">
+    <div class="noise-overlay"></div>
+
+    <!-- Announcement Bar -->
+    <div class="bg-[#121212] text-white text-center py-2 text-xs uppercase tracking-[.2em] font-light">
+        Free Shipping on all orders above ₹2000!
+    </div>
+
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white border-b border-[rgba(18,18,18,0.08)]">
+        <div class="container mx-auto px-4 lg:px-12 py-5 flex items-center justify-between">
+            <!-- Mobile Menu Toggle -->
+            <button class="lg:hidden text-2xl" id="menu-btn" aria-label="Open Menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <!-- Logo -->
+            <a href="index.html" class="flex items-center">
+                <img src="logo.png" alt="Fatehpuria" class="h-8 md:h-10 w-auto object-contain">
+            </a>
+
+            <!-- Navigation Links -->
+            <nav class="hidden lg:flex space-x-10 text-[13px] font-normal uppercase tracking-[.1em]">
+                <a href="index.html" class="hover:underline underline-offset-[6px] decoration-[1.5px]">Home</a>
+                <a href="about.html" class="hover:underline underline-offset-[6px] decoration-[1.5px]">About Us</a>
+                <a href="partners.html" class="hover:underline underline-offset-[6px] decoration-[1.5px]">Partner Brands</a>
+                <a href="warehouse.html" class="hover:underline underline-offset-[6px] decoration-[1.5px]">Warehouse</a>
+                <a href="contact.html" class="hover:underline underline-offset-[6px] decoration-[1.5px]">Contact</a>
+            </nav>
+
+            <!-- Icons -->
+            <div class="flex items-center space-x-8 text-xl">
+                <a href="#" class="hover:scale-110 transition-transform"><i class="fa-solid fa-magnifying-glass text-lg"></i></a>
+                <a href="login.html" class="hidden sm:block hover:scale-110 transition-transform"><i class="fa-regular fa-user text-lg"></i></a>
+                <a href="cart.html" class="hover:scale-110 transition-transform relative">
+                    <i class="fa-solid fa-cart-shopping text-lg"></i>
+                    <span class="absolute -top-2.5 -right-2.5 bg-[#121212] text-white text-[9px] font-bold rounded-full w-4 h-4 flex items-center justify-center">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Slider with Video Background -->
+    <section class="relative overflow-hidden h-[75vh]">
+        <div class="particles-container"></div>
+        <!-- Decorative Background Grid -->
+        <div class="absolute inset-0 bg-grid-animate opacity-10 z-[1]"></div>
+        <!-- Decorative Background Shapes -->
+        <div class="shape-blob w-[400px] h-[400px] -top-20 -left-20 animate-float opacity-50"></div>
+        <div class="shape-blob w-[300px] h-[300px] bottom-10 right-10 animate-float-delayed opacity-30"></div>
+        
+        <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover z-0" poster="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=2070&auto=format&fit=crop">
+            <source src="https://v1.mixkit.co/videos/download/mixkit-shipping-containers-at-a-port-terminal-16013-large.mp4" type="video/mp4">
+            <source src="https://assets.mixkit.co/videos/preview/mixkit-shipping-containers-at-a-port-terminal-16013-large.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="relative flex items-center justify-center h-full bg-black bg-opacity-40 z-10">
+            <div class="text-center text-white px-4 max-w-3xl">
+                <h1 class="text-4xl md:text-6xl font-light mb-6 uppercase tracking-[.1em] leading-tight hero-title" data-aos="fade-up">Reliable FMCG & Hygiene Distribution Across India</h1>
+                <p class="text-base md:text-lg mb-10 font-light tracking-[.05em] opacity-90" data-aos="fade-up" data-aos-delay="200">Technology-backed fulfilment, priority service levels, and a partner-first approach built over five decades of supply-chain excellence.</p>
+                <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6" data-aos="fade-up" data-aos-delay="400">
+                    <a href="contact.html" class="inline-block bg-white text-[#121212] px-10 py-3.5 uppercase text-xs tracking-[.2em] font-medium hover:bg-[#121212] hover:text-white transition duration-500 shadow-sm btn-glint">
+                        Talk to us
+                    </a>
+                    <a href="warehouse.html" class="inline-block border border-white text-white px-10 py-3.5 uppercase text-xs tracking-[.2em] font-medium hover:bg-white hover:text-[#121212] transition duration-500 shadow-sm btn-glint">
+                        Our Warehouse
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- Scroll Down Mouse Animation -->
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 hidden md:block">
+            <div class="w-6 h-10 border-2 border-white rounded-full flex justify-center p-1">
+                <div class="w-1 h-2 bg-white rounded-full animate-bounce"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Legacy Stats -->
+    <section class="container mx-auto px-4 lg:px-12 py-20 bg-white relative overflow-hidden stats-container">
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+            <div class="space-y-2" data-aos="fade-up">
+                <div class="text-4xl font-light text-[#121212] stat-number" data-target="50" data-suffix="+">0+</div>
+                <div class="text-[11px] uppercase tracking-[.2em] text-gray-500">Years in supply chain</div>
+            </div>
+            <div class="space-y-2" data-aos="fade-up" data-aos-delay="100">
+                <div class="text-4xl font-light text-[#121212] stat-number" data-target="24" data-suffix="/7">0/7</div>
+                <div class="text-[11px] uppercase tracking-[.2em] text-gray-500">Priority Support</div>
+            </div>
+            <div class="space-y-2" data-aos="fade-up" data-aos-delay="200">
+                <div class="text-4xl font-light text-[#121212] stat-number" data-target="99.5" data-suffix="%">0%</div>
+                <div class="text-[11px] uppercase tracking-[.2em] text-gray-500">Fulfilment Adherence</div>
+            </div>
+            <div class="space-y-2" data-aos="fade-up" data-aos-delay="300">
+                <div class="text-4xl font-light text-[#121212] stat-number" data-target="24" data-suffix="H">0H</div>
+                <div class="text-[11px] uppercase tracking-[.2em] text-gray-500">Average Turnaround</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Decorative Drawing Line -->
+    <div class="container mx-auto px-4 lg:px-12 -my-10 relative z-10 hidden lg:block">
+        <svg width="100%" height="100" viewBox="0 0 1200 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path class="drawing-line" d="M0 50C200 50 400 10 600 50C800 90 1000 50 1200 50" stroke="#121212" stroke-width="0.5" opacity="0.2"/>
+        </svg>
+    </div>
+
+    <!-- Partner Brands Marquee -->
+    <section class="py-12 bg-[#fafafa] border-y border-[rgba(18,18,18,0.05)] overflow-hidden">
+        <div class="container mx-auto px-4 mb-8 text-center">
+            <h3 class="text-[10px] uppercase tracking-[.4em] text-gray-400 font-semibold">Trusted by Leading Brands</h3>
+        </div>
+        <div class="marquee-container">
+            <div class="marquee-content">
+                <!-- Logos for seamless loop -->
+                <a href="partners.html" class="marquee-item"><img src="https://www.vectorlogo.zone/logos/amazon/amazon-ar21.svg" alt="Amazon"></a>
+                <a href="partners.html" class="marquee-item"><img src="https://www.vectorlogo.zone/logos/google/google-ar21.svg" alt="Google"></a>
+                <a href="partners.html" class="marquee-item"><img src="https://www.vectorlogo.zone/logos/shopify/shopify-ar21.svg" alt="Shopify"></a>
+                <a href="partners.html" class="marquee-item"><img src="https://www.vectorlogo.zone/logos/ups/ups-ar21.svg" alt="UPS"></a>
+                <a href="partners.html" class="marquee-item"><img src="https://www.vectorlogo.zone/logos/fedex/fedex-ar21.svg" alt="FedEx"></a>
+                <a href="partners.html" class="marquee-item"><img src="https://www.vectorlogo.zone/logos/stripe/stripe-ar21.svg" alt="Stripe"></a>
+                <a href="partners.html" class="marquee-item"><img src="https://www.vectorlogo.zone/logos/apple/apple-ar21.svg" alt="Apple"></a>
+                
+                <!-- Duplicate set for seamless loop -->
+                <a href="partners.html" class="marquee-item"><img src="https://www.vectorlogo.zone/logos/amazon/amazon-ar21.svg" alt="Amazon"></a>
+                <a href="partners.html" class="marquee-item"><img src="https://www.vectorlogo.zone/logos/google/google-ar21.svg" alt="Google"></a>
+                <a href="partners.html" class="marquee-item"><img src="https://www.vectorlogo.zone/logos/shopify/shopify-ar21.svg" alt="Shopify"></a>
+                <a href="partners.html" class="marquee-item"><img src="https://www.vectorlogo.zone/logos/ups/ups-ar21.svg" alt="UPS"></a>
+                <a href="partners.html" class="marquee-item"><img src="https://www.vectorlogo.zone/logos/fedex/fedex-ar21.svg" alt="FedEx"></a>
+                <a href="partners.html" class="marquee-item"><img src="https://www.vectorlogo.zone/logos/stripe/stripe-ar21.svg" alt="Stripe"></a>
+                <a href="partners.html" class="marquee-item"><img src="https://www.vectorlogo.zone/logos/apple/apple-ar21.svg" alt="Apple"></a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Core Specialities -->
+    <section class="container mx-auto px-4 lg:px-12 py-20 border-t border-[rgba(18,18,18,0.05)] relative">
+        <div class="shape-blob w-[200px] h-[200px] top-1/2 -right-10 animate-float opacity-20"></div>
+        <div class="floating-shape shape-1 top-10 left-10 opacity-10"></div>
+        <div class="floating-shape shape-2 bottom-20 right-20 opacity-10"></div>
+        <div class="flex items-end justify-between mb-12" data-aos="fade-right">
+            <div>
+                <h2 class="text-2xl font-light uppercase tracking-[.15em]">Our Specialities</h2>
+                <div class="h-0.5 w-12 bg-[#121212] mt-3"></div>
+            </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+            <div class="group relative overflow-hidden aspect-[4/5] bg-gray-100 hover-card tilt-card" data-aos="zoom-in">
+                <div class="reveal-overlay"></div>
+                <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=2070&auto=format&fit=crop" alt="Hygiene" class="object-cover w-full h-full transition duration-700 group-hover:scale-110 parallax-img" data-reveal>
+                <div class="absolute inset-0 bg-black bg-opacity-20 flex flex-col justify-end p-8 text-white">
+                    <h3 class="text-xl uppercase tracking-widest font-light mb-2">Modern Hygiene</h3>
+                    <p class="text-xs opacity-80 tracking-wide">Leading distribution of advanced hygiene products across modern retail.</p>
+                </div>
+            </div>
+            <!-- Speciality 2 -->
+            <div class="group relative overflow-hidden aspect-[4/5] bg-gray-100 hover-card tilt-card" data-aos="zoom-in" data-aos-delay="100">
+                <div class="reveal-overlay"></div>
+                <img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?q=80&w=2070&auto=format&fit=crop" alt="FMCG" class="object-cover w-full h-full transition duration-700 group-hover:scale-110 parallax-img" data-reveal>
+                <div class="absolute inset-0 bg-black bg-opacity-20 flex flex-col justify-end p-8 text-white">
+                    <h3 class="text-xl uppercase tracking-widest font-light mb-2">FMCG Distribution</h3>
+                    <p class="text-xs opacity-80 tracking-wide">Strategic supply chain solutions for fast-moving consumer goods.</p>
+                </div>
+            </div>
+            <!-- Speciality 3 -->
+            <div class="group relative overflow-hidden aspect-[4/5] bg-gray-100 hover-card tilt-card" data-aos="zoom-in" data-aos-delay="200">
+                <div class="reveal-overlay"></div>
+                <img src="https://images.unsplash.com/photo-1553413077-190dd305871c?q=80&w=1935&auto=format&fit=crop" alt="Ecommerce" class="object-cover w-full h-full transition duration-700 group-hover:scale-110 parallax-img" data-reveal>
+                <div class="absolute inset-0 bg-black bg-opacity-20 flex flex-col justify-end p-8 text-white">
+                    <h3 class="text-xl uppercase tracking-widest font-light mb-2">E-commerce FulfiIment</h3>
+                    <p class="text-xs opacity-80 tracking-wide">Technology-backed logistics for India's fastest-growing digital brands.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Legacy & Experience -->
+    <section class="bg-white py-20 border-t border-[rgba(18,18,18,0.05)] relative overflow-hidden">
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[20vw] font-bold text-gray-100 opacity-20 pointer-events-none select-none z-0 tracking-tighter" data-aos="fade-up">1961</div>
+        <div class="absolute top-0 left-0 w-full overflow-hidden leading-none z-0 opacity-[0.03]">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" class="relative block w-[calc(100%+1.3px)] h-[150px]">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="fill-[#121212]"></path>
+            </svg>
+        </div>
+        <div class="shape-blob w-[500px] h-[500px] -bottom-24 -left-24 animate-float-delayed opacity-40"></div>
+        <div class="container mx-auto px-4 lg:px-12 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div data-aos="fade-right">
+                <p class="text-xs uppercase tracking-[.3em] text-gray-500 mb-4">Legacy + Innovation</p>
+                <h2 class="text-3xl md:text-4xl font-light uppercase tracking-[.1em] mb-8 leading-tight text-[#121212]">50+ Years of Experience in FMCG Distribution & Hygiene Products</h2>
+                <p class="text-[15px] text-gray-600 leading-relaxed mb-10 tracking-wide">
+                    <strong>Part of a Legacy Since 1961:</strong> While FHPL was established in 1976 to focus on modern hygiene and e-commerce distribution, we inherit a strong trading and supply chain expertise built over half a decade by our parent group, ensuring stability and unparalleled market knowledge.
+                </p>
+                <div class="flex space-x-8">
+                    <a href="about.html" class="text-sm uppercase tracking-[.2em] font-medium border-b border-[#121212] pb-1 hover:opacity-70 transition">Learn more</a>
+                    <a href="contact.html" class="text-sm uppercase tracking-[.2em] font-medium border-b border-[#121212] pb-1 hover:opacity-70 transition">Connect with us</a>
+                </div>
+            </div>
+            <div class="relative" data-aos="fade-left">
+                <div class="reveal-overlay"></div>
+                <img src="https://images.unsplash.com/photo-1587293852726-70cdb56c2866?q=80&w=2072&auto=format&fit=crop" alt="Legacy" class="w-full h-auto shadow-2xl" data-reveal>
+                <div class="absolute -bottom-8 -right-8 bg-[#121212] text-white p-10 hidden md:block" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="text-3xl font-light mb-1">99.5%</div>
+                    <div class="text-[10px] uppercase tracking-widest opacity-70">Fulfilment Rate</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white pt-20 pb-10 relative overflow-hidden">
+        <div class="absolute -bottom-20 -right-20 w-96 h-96 bg-gray-50 rounded-full opacity-50 z-0 rotate-slow"></div>
+        <div class="container mx-auto px-4 lg:px-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 relative z-10">
+            <!-- About -->
+            <div class="space-y-6">
+                <h4 class="text-[13px] font-semibold uppercase tracking-[.2em] mb-8">Fatehpuria Hygiene (FHPL)</h4>
+                <p class="text-[13px] text-gray-600 leading-relaxed tracking-wide">
+                    Technology-backed fulfiIment, priority service levels, and a partner-first approach built over five decades of supply-chain excellence.
+                </p>
+                <div class="flex space-x-6 text-xl text-[#121212]">
+                    <a href="#" class="hover:opacity-70 transition"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#" class="hover:opacity-70 transition"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="hover:opacity-70 transition"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+            </div>
+            <!-- Quick Links -->
+            <div>
+                <h4 class="text-[13px] font-semibold uppercase tracking-[.2em] mb-8">Company</h4>
+                <ul class="text-[13px] text-gray-600 space-y-4 tracking-wide">
+                    <li><a href="about.html" class="hover:underline underline-offset-4 decoration-1">About Us</a></li>
+                    <li><a href="partners.html" class="hover:underline underline-offset-4 decoration-1">Partner Brands</a></li>
+                    <li><a href="warehouse.html" class="hover:underline underline-offset-4 decoration-1">Warehouse</a></li>
+                    <li><a href="careers.html" class="hover:underline underline-offset-4 decoration-1">Careers</a></li>
+                    <li><a href="contact.html" class="hover:underline underline-offset-4 decoration-1">Contact Us</a></li>
+                </ul>
+            </div>
+            <!-- Customer Service -->
+            <div>
+                <h4 class="text-[13px] font-semibold uppercase tracking-[.2em] mb-8">Get In Touch</h4>
+                <ul class="text-[13px] text-gray-600 space-y-4 tracking-wide">
+                    <li class="flex items-start space-x-3">
+                        <i class="fa-solid fa-location-dot mt-1"></i>
+                        <span>Fatehpuria Hygiene Private Limited,<br>Registered Office Address,<br>India</span>
+                    </li>
+                    <li class="flex items-center space-x-3">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>+91 98765 43210</span>
+                    </li>
+                    <li class="flex items-center space-x-3">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>info@fhpl.com</span>
+                    </li>
+                </ul>
+            </div>
+            <!-- Newsletter -->
+            <div class="space-y-6">
+                <h4 class="text-[13px] font-semibold uppercase tracking-[.2em] mb-8">Business Partner?</h4>
+                <p class="text-[13px] text-gray-600 tracking-wide">Join our network of leading FMCG and Hygiene brands.</p>
+                <a href="contact.html" class="inline-block border border-[#121212] text-[#121212] px-8 py-2.5 uppercase text-[10px] tracking-[.2em] font-medium hover:bg-[#121212] hover:text-white transition duration-500">
+                    Partner With Us
+                </a>
+            </div>
+        </div>
+        <div class="container mx-auto px-4 lg:px-12 mt-24 pt-8 border-t border-[rgba(18,18,18,0.08)] flex flex-col md:flex-row justify-between items-center text-[11px] text-gray-500 uppercase tracking-[.15em]">
+            <p>&copy; 2026, Fatehpuria Hygiene Private Limited. All Rights Reserved.</p>
+            <div class="mt-4 md:mt-0 flex space-x-4">
+                <p>Distributing Excellence Since 1961</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu Drawer (Hidden by default) -->
+    <div id="mobile-menu" class="fixed inset-0 bg-black bg-opacity-50 z-[60] hidden transition-opacity duration-300">
+        <div class="bg-white w-4/5 h-full p-8 space-y-8 transform -translate-x-full transition-transform duration-300">
+            <div class="flex justify-between items-center">
+                <span class="text-xl font-bold uppercase">Menu</span>
+                <button id="close-menu" aria-label="Close Menu"><i class="fa-solid fa-xmark text-2xl"></i></button>
+            </div>
+            <nav class="flex flex-col space-y-6 text-sm uppercase tracking-widest">
+                <a href="index.html" class="border-b border-gray-100 pb-2">Home</a>
+                <a href="about.html" class="border-b border-gray-100 pb-2">About Us</a>
+                <a href="partners.html" class="border-b border-gray-100 pb-2">Partner Brands</a>
+                <a href="warehouse.html" class="border-b border-gray-100 pb-2">Warehouse</a>
+                <a href="contact.html" class="border-b border-gray-100 pb-2">Contact</a>
+            </nav>
+            <div class="pt-8 flex space-x-6 text-xl text-[#121212]">
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
