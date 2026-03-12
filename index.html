@@ -53,6 +53,24 @@
     </style>
 </head>
 <body class="bg-white text-[#121212]">
+    <!-- Intro Animation Overlay -->
+    <div id="intro-overlay" class="fixed inset-0 z-[100] bg-white flex flex-col items-center justify-center overflow-hidden">
+        <div id="intro-logo-container" class="relative z-10 opacity-0 transform scale-90 transition-all duration-1000 ease-out">
+            <img src="logo.png" alt="Fatehpuria Logo" class="h-16 md:h-24 w-auto object-contain">
+        </div>
+        <div id="intro-map-container" class="absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-1000">
+            <div class="relative w-full max-w-2xl px-4 flex justify-center">
+                <!-- New India Map Image -->
+                <img src="india_map.png" alt="India Map" class="w-full h-auto max-h-[70vh] object-contain">
+            </div>
+            
+            <div id="intro-text" class="absolute bottom-20 text-center opacity-0 transition-opacity duration-1000">
+                <p class="text-[10px] uppercase tracking-[.5em] text-gray-400">Reliable FMCG & Hygiene Distribution</p>
+                <p class="text-[12px] uppercase tracking-[.2em] mt-2 font-semibold">Fatehpuria Hygiene Private Limited</p>
+            </div>
+        </div>
+    </div>
+
     <div class="noise-overlay"></div>
 
     <!-- Announcement Bar -->
