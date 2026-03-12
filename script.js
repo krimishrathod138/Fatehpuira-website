@@ -1,4 +1,57 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Intro Animation Sequence
+    const introOverlay = document.getElementById('intro-overlay');
+    const introLogo = document.getElementById('intro-logo-container');
+    const introMap = document.getElementById('intro-map-container');
+    const introText = document.getElementById('intro-text');
+
+    if (introOverlay) {
+        // Check if intro has already been shown in this session
+        if (sessionStorage.getItem('introShown')) {
+            introOverlay.style.display = 'none';
+            document.body.classList.remove('intro-active');
+            if (typeof AOS !== 'undefined') {
+                setTimeout(() => AOS.refresh(), 100);
+            }
+        } else {
+            document.body.classList.add('intro-active');
+            
+            // 1. Show Logo
+            setTimeout(() => {
+                introLogo.classList.add('show');
+            }, 500);
+
+            // 2. Transition to Map
+            setTimeout(() => {
+                introLogo.style.opacity = '0';
+                introLogo.style.transform = 'translateY(-20px) scale(0.8)';
+                
+                setTimeout(() => {
+                    introMap.classList.add('show');
+                }, 500);
+            }, 2500);
+
+            // 3. Show Intro Text
+            setTimeout(() => {
+                introText.classList.add('show');
+            }, 4000);
+
+            // 4. Reveal Website
+            setTimeout(() => {
+                introOverlay.classList.add('hide');
+                document.body.classList.remove('intro-active');
+                
+                // Mark intro as shown in session storage
+                sessionStorage.setItem('introShown', 'true');
+                
+                // Re-initialize AOS after intro to ensure animations trigger correctly
+                if (typeof AOS !== 'undefined') {
+                    AOS.refresh();
+                }
+            }, 7000);
+        }
+    }
+
     // Custom Cursor Logic
     const cursor = document.createElement('div');
     cursor.id = 'custom-cursor';
