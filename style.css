@@ -538,3 +538,43 @@ img[data-reveal].loaded {
         display: none;
     }
 }
+
+/* Intro Animation Styles */
+#intro-overlay {
+    transition: transform 1s cubic-bezier(0.77, 0, 0.175, 1), opacity 1s ease;
+}
+
+#intro-overlay.hide {
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
+}
+
+#intro-logo-container.show {
+    opacity: 1;
+    transform: scale(1);
+}
+
+#intro-map-container.show {
+    opacity: 1;
+}
+
+#intro-text.show {
+    opacity: 1;
+}
+
+#intro-map-container img {
+    filter: drop-shadow(0 0 20px rgba(0,0,0,0.05));
+    animation: simpleFloat 6s ease-in-out infinite;
+}
+
+@keyframes simpleFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Ensure main content is hidden initially or just overlay covers it */
+body.intro-active {
+    overflow: hidden;
+}
+
